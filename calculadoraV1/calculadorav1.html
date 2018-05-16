@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Calculadora v1</title>
+	<meta charset="utf-8">
+	<script type="text/javascript" 
+			src="calculadorav1.js">
+	</script>
+
+</head>
+<body>
+	<p>
+		Esta es una calculadora con un boton
+	</p>
+
+	<p>
+		DATO 1
+	</p>
+	<input type="text" id="Dato1">
+	<!-- <button onclick="obtenerDatos();">RecogerValor</button> -->
+
+	<p>
+		DATO 2
+	</p>
+	<input type="text" id="Dato2">
+	<!-- <button onclick="obtenerDatos();">RecogerValor</button> -->
+	<br>
+	<br>
+	<br>
+	
+	<button onclick="operar('+');" id="suma">     +  </button>
+	<button onclick="operar('-');" id="resta">    -  </button>
+	<button onclick="operar('*');" id="mult">     *  </button>
+	<button onclick="operar('/');" id="division"> /  </button>
+	<button onclick="operar('%');" id="modulo">   %  </button>
+	
+	<p id="Resultado">
+		Resultado
+		
+	</p>
+
+</body>
+</html>
+
