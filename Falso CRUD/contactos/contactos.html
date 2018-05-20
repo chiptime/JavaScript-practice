@@ -8,15 +8,54 @@
 	<meta name="keywords" content="create, read, update, delete">
 	<meta name="generator" content="tecnologia que estamos usando">
 	<meta http-equiv="refresh" content="1000">
-	<meta http-equiv="default-style" content="dato.css">
-	<link rel="stylesheet" type="text/css" href="dato.css">
+	<link rel="stylesheet" href="https://bootswatch.com/4/cyborg/bootstrap.min.css">
+	
+	
 	<link rel="icon" type="image/PNG" src="img.png">
 
 
-	<script type="text/javascript" href="contactos.js"></script>
+	<script type="text/javascript" src="contactos.js"></script>
 </head>
 
 <body>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+  <a class="navbar-brand" href="#">Barra de Navegación</a>
+</nav>
+
+
+
+<div class="container">
+       
+        <div id="App" class="row pt-5">
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-header">
+                        <h4 style="color:white; text-align: center;">Agregar Contacto</h4>
+                    </div>
+                    <form id="formulario" class="card-body">
+                        <div class="form-group">
+                            <input type="text" id="nombre" placeholder="Nombre del contacto" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" id="telefono" placeholder="Teléfono" class="form-control">
+                        </div>             
+                        <input type="submit" value="Guardar" class="btn btn-primary btn-block">
+                    </form>
+                </div>
+            </div>
+
+            <div id="lista" class="col-md-8"></div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+<!-- <div class="container">
 	<div>
 		<p>Nombre</p>
 		<input type="text" id="nombre">
@@ -28,11 +67,15 @@
 	</div>
 
 	<div>
-		<button id="crear" onclick="CrearContacto();"> Añadir Contacto</button>
+		<button id="crear" onclick="LlenarLista();"> Añadir Contacto</button>
 	</div>
-	
+	<div>
+		<button onclick="ListaContactos[0].ImprimirLista;"> Añadir Contacto</button>
+	</div>
+
 	<div>
 		<p id="lista"> </p>
 	</div>
+</div> -->
 </body>
 </html>
