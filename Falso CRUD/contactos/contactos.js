@@ -24,7 +24,6 @@ class UI {
         if(elemento.name === 'borrar')
             elemento.parentElement.parentElement.parentElement.remove()
     }
-    //////////
     EditarContacto(elemento){
         if(elemento.name === 'editar'){            
         const listaContactos = document.getElementById('formulario')
@@ -36,28 +35,24 @@ class UI {
 
         }
     }
-    EliminarTodo(){
-    }
-    //////////////////
     LimpiarFormulario(){
         document.getElementById('formulario').reset()
     }
 }
+
 function modificarUI(contacto){
     const nombre   = document.getElementById('n1')
     const telefono = document.getElementById('t1')
     nombre.innerHTML = `${contacto.nombre}`
     telefono.innerHTML = `${contacto.telefono}`
 }
-// DOM Events
 
+// DOM Events
 document.addEventListener('DOMContentLoaded', () => {///////
 document.getElementById('formulario').addEventListener('submit', function(e){
    const nombre = document.getElementById('nombre').value
    const telefono = document.getElementById('telefono').value   
-
    const contacto = new Contacto(nombre,telefono)
-
    const ui = new UI()
    ui.AgregarContacto(contacto)
    ui.LimpiarFormulario()
@@ -68,53 +63,11 @@ document.getElementById('lista').addEventListener('click', function(e){
     const ui = new UI()
     ui.EliminarContacto(e.target)
     ui.EditarContacto(e.target)
-    //e.preventDefault() 
-    //document.getElementById('lista').removeEventListener('click',false)
-    //if(document.getElementById('formularioCambiar')){
-    //  console.log('el condicional funciona')
-                   ////////Al relizarse te detecta cada click realizado por el mouse, por lo que hay que 
-       //delimitarlo de alguna manera, como comprobar exactamente donde es el click y dejarlo hay
-    //}
-        
     document.getElementById('formularioCambiar').addEventListener('submit', function(e){
        const nombre = document.getElementById('nombreCambiar').value
        const telefono = document.getElementById('telefonoCambiar').value
        const contactoEditar = new Contacto(nombre,telefono)   
        modificarUI(contactoEditar)
-
-       console.log(contactoEditar)
-    })
-
-    
+    })   
 })
 })
-
-
-
-
-
-
-
-
-
-
-
-
-// llama al constructor
-//const construirC = () => { return new Contacto(document.getElementById('nombre').value,document.getElementById('telefono').value)}
-
-function LlenarLista(){
-        //Contacto.AgregarContacto(ListaContactos,construirC())
-        
-        //Contacto.ImprimirLista()
-        //ListaContactos.Contacto.ImprimirLista()
-
-        //ListaContactos.ImprimirLista
-        // var resultado
-        // resultado = document.getElementById('lista')
-        // ListaContactos.forEach(
-        // resultado.innerHTML = 
-        //    "Nombre: "   + ListaContactos[].nombre + "<br>" + 
-        //    "Teléfono: " + ListaContactos[].telefono + "<br>"
-        //)
-    }
