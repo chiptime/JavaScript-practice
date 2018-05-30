@@ -1,0 +1,37 @@
+<!DOCTYPE HTML PUBLIC>
+<html>
+<head>
+	<title> Pagina de prueba </title>
+	<meta charset="utf-8">
+	<meta name="keywords" content="javascript, java, css, html">
+	<meta name="author" content="br">
+	<meta name="description" content="pruebas">
+	<meta name="generator" content="tecnologia usada">
+
+<!--	<meta http-equiv="refresh" content="100"> -->
+	<meta http-equiv="default-style" content="estiloArray.css">
+	<link type="text/CSS" rel="stylesheet" href="estiloArray.css">
+
+	<script type="text/javascript" src="contactosArray.js"></script>
+</head>
+<body>
+	<div id="contenedor">
+	<div class="casillas">	
+		<input type="text" id="nombre">
+	</div>
+    <div class="casillas">	
+		<input type="text" id="telefono">
+	</div>
+	<div class="casillas">	
+		<input type="text" id="direccion">
+	</div>
+		<input type="submit" id="enviar" value="Guardar" name="enviar" 
+		onclick="InsertarContacto();">
+
+		<input type="submit" id="pintar" value="Pintar" name="enviar" 
+		onclick="ImprimirContactos('resultado');">
+	</div>
+	<div id="resultado">	
+	</div>
+</body>
+</html>

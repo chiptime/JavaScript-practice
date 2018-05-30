@@ -1,0 +1,18 @@
+div#contenedor
+{
+	text-align: center;
+}
+div.casillas
+{
+	padding-top: 5px; 
+	padding-bottom: 5px;
+}
+div#resultado
+{
+	font-size:20pt;
+	color: rgb(0,255,100);
+	font-weight: bold;
+	font-style: italic;
+	
+	/*font-family: Helvetica;*/
+}
