@@ -32,7 +32,6 @@ class UI {
         document.querySelectorAll('input#nombre')[1].setAttribute("id", "nombreCambiar")
         document.querySelectorAll('input#telefono')[1].setAttribute("id", "telefonoCambiar")
         clonelista.setAttribute("id", "formularioCambiar")
-
         }
     }
     LimpiarFormulario(){
@@ -63,11 +62,13 @@ document.getElementById('lista').addEventListener('click', function(e){
     const ui = new UI()
     ui.EliminarContacto(e.target)
     ui.EditarContacto(e.target)
+    e.preventDefault()
     document.getElementById('formularioCambiar').addEventListener('submit', function(e){
        const nombre = document.getElementById('nombreCambiar').value
        const telefono = document.getElementById('telefonoCambiar').value
        const contactoEditar = new Contacto(nombre,telefono)   
        modificarUI(contactoEditar)
+       console.log(contactoEditar)
     })   
 })
 })
